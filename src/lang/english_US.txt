@@ -613,6 +613,7 @@ STR_GRAPH_INCOME_CAPTION                                        :{WHITE}Income G
 STR_GRAPH_CARGO_DELIVERED_CAPTION                               :{WHITE}Units of cargo delivered
 STR_GRAPH_COMPANY_PERFORMANCE_RATINGS_CAPTION                   :{WHITE}Company performance ratings (maximum rating=1000)
 STR_GRAPH_COMPANY_VALUES_CAPTION                                :{WHITE}Company Value Graph
+STR_GRAPH_COMPANY_EXPANCES_CAPTION                              :{WHITE}Company Expances
 
 STR_GRAPH_LAST_72_MINUTES_TIME_LABEL                            :{TINY_FONT}{BLACK}Last 72 minutes
 
