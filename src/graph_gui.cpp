@@ -25,6 +25,7 @@
 #include "timer/timer_game_tick.h"
 #include "timer/timer_game_calendar.h"
 #include "timer/timer_game_economy.h"
+#include "window_type.h"
 #include "zoom_func.h"
 
 #include "widgets/graph_widget.h"
@@ -93,6 +94,7 @@ struct GraphLegendWindow : Window {
 		InvalidateWindowData(WC_DELIVERED_CARGO, 0);
 		InvalidateWindowData(WC_PERFORMANCE_HISTORY, 0);
 		InvalidateWindowData(WC_COMPANY_VALUE, 0);
+		InvalidateWindowData(WC_EXPANCES, 0);
 	}
 
 	/**
