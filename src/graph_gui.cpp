@@ -1496,7 +1496,7 @@ struct ExpencesGraphWindow : BaseGraphWindow {
 	}
 
 	OverflowSafeInt64 GetGraphData(const Company *c, int j) override {
-		return (OverflowSafeInt64) c->old_economy[j].expenses.max();
+		return c->old_economy[j].expenses * -1;
 	}
 };
 
