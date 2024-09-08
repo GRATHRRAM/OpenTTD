@@ -17,5 +17,6 @@ void ShowPerformanceHistoryGraph();
 void ShowCompanyValueGraph();
 void ShowCargoPaymentRates();
 void ShowPerformanceRatingDetail();
+void ShowExpencesGraph();
 
 #endif /* GRAPH_GUI_H */
