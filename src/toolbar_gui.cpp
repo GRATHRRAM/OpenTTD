@@ -624,10 +624,10 @@ static const int GRMN_DELIVERED_CARGO_GRAPH = -3;     ///< Show delivered cargo 
 static const int GRMN_PERFORMANCE_HISTORY_GRAPH = -4; ///< Show performance history graph
 static const int GRMN_COMPANY_VALUE_GRAPH = -5;       ///< Show company value graph
 static const int GRMN_CARGO_PAYMENT_RATES = -6;       ///< Show cargo payment rates graph
-static const int GRMN_EXPANCES_GRAPH = -7;            ///< Show expances graph
-static const int LTMN_PERFORMANCE_LEAGUE = -8;        ///< Show default league table
-static const int LTMN_PERFORMANCE_RATING = -9;        ///< Show detailed performance rating
-static const int LTMN_HIGHSCORE          = -10;       ///< Show highscrore table
+static const int GRMN_EXPANCES_GRAPH = -10;           ///< Show expances graph
+static const int LTMN_PERFORMANCE_LEAGUE = -7;        ///< Show default league table
+static const int LTMN_PERFORMANCE_RATING = -8;        ///< Show detailed performance rating
+static const int LTMN_HIGHSCORE          = -9;        ///< Show highscrore table
 
 static void AddDropDownLeagueTableOptions(DropDownList &list)
 {
