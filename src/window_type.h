@@ -545,11 +545,11 @@ enum WindowClass {
 	WC_DELIVERED_CARGO,
 
 	/**
-	 * Expances graph; %Window numbers:
-	 *   - 0 = #ExpancesGraphWidgets @Note From Grathrram I have no idea what i am doing@
+	 * Expences graph; %Window numbers:
+	 *   - 0 = #ExpencesGraphWidgets
 	*/
 
-	WC_EXPANCES,
+	WC_EXPENCES,
 
 	/**
 	 * Performance history graph; %Window numbers:

@@ -485,7 +485,7 @@ STR_GRAPH_MENU_DELIVERED_CARGO_GRAPH                            :Delivered cargo
 STR_GRAPH_MENU_PERFORMANCE_HISTORY_GRAPH                        :Performance history graph
 STR_GRAPH_MENU_COMPANY_VALUE_GRAPH                              :Company value graph
 STR_GRAPH_MENU_CARGO_PAYMENT_RATES                              :Cargo payment rates
-STR_GRAPH_MENU_EXPANCES                                         :Company Expances
+STR_GRAPH_MENU_EXPENCES                                         :Company Expences
 
 # Company league menu
 STR_GRAPH_MENU_COMPANY_LEAGUE_TABLE                             :Company league table

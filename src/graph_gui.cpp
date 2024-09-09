@@ -94,7 +94,7 @@ struct GraphLegendWindow : Window {
 		InvalidateWindowData(WC_DELIVERED_CARGO, 0);
 		InvalidateWindowData(WC_PERFORMANCE_HISTORY, 0);
 		InvalidateWindowData(WC_COMPANY_VALUE, 0);
-		InvalidateWindowData(WC_EXPANCES, 0);
+		InvalidateWindowData(WC_EXPENCES, 0);
 	}
 
 	/**
@@ -1525,8 +1525,8 @@ static constexpr NWidgetPart _nested_expences_widgets[] = {
 
 
 static WindowDesc _expences_desc(
-	WDP_AUTO, "graph_expances", 0, 0,
-	WC_EXPANCES, WC_NONE,
+	WDP_AUTO, "graph_expences", 0, 0,
+	WC_EXPENCES, WC_NONE,
 	0,
 	_nested_expences_widgets
 );
