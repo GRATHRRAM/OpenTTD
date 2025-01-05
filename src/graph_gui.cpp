@@ -1845,3 +1845,8 @@ void InitializeGraphGui()
 	_legend_excluded_cargo_payment_rates = 0;
 	_legend_excluded_cargo_production_history = 0;
 }
+
+
+void ShowSharesPriceGraph() {
+	return;
+}

@@ -568,4 +568,6 @@ add_files(
     window_type.h
     zoom_func.h
     zoom_type.h
+    shares.h
+    shares.cpp
 )

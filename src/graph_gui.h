@@ -20,5 +20,6 @@ void ShowCompanyValueGraph();
 void ShowCargoPaymentRates();
 void ShowPerformanceRatingDetail();
 void ShowIndustryProductionGraph(WindowNumber window_number);
+void ShowSharesPriceGraph();
 
 #endif /* GRAPH_GUI_H */
