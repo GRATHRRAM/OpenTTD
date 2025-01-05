@@ -613,6 +613,7 @@ STR_GRAPH_Y_LABEL_NUMBER                                        :{TINY_FONT}{COM
 STR_GRAPH_OPERATING_PROFIT_CAPTION                              :{WHITE}Operating Profit Graph
 STR_GRAPH_INCOME_CAPTION                                        :{WHITE}Income Graph
 STR_GRAPH_CARGO_DELIVERED_CAPTION                               :{WHITE}Units of cargo delivered
+STR_GRAPH_SHARES_PRICE                                          :{WHITE}Shares Price
 STR_GRAPH_COMPANY_PERFORMANCE_RATINGS_CAPTION                   :{WHITE}Company performance ratings (maximum rating=1000)
 STR_GRAPH_COMPANY_VALUES_CAPTION                                :{WHITE}Company Value Graph
 

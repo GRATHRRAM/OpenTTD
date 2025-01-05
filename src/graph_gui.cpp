@@ -93,6 +93,7 @@ struct GraphLegendWindow : Window {
 		InvalidateWindowData(WC_DELIVERED_CARGO, 0);
 		InvalidateWindowData(WC_PERFORMANCE_HISTORY, 0);
 		InvalidateWindowData(WC_COMPANY_VALUE, 0);
+		InvalidateWindowData(WC_SHARES_PRICE, 0);
 	}
 
 	/**
@@ -1847,6 +1848,57 @@ void InitializeGraphGui()
 }
 
 
+/***************************/
+/* SHOW SHARES PRICE GRAPH */
+/***************************/
+
+struct SharesPriceGraphWindow : BaseGraphWindow {
+	SharesPriceGraphWindow(WindowDesc &desc, WindowNumber window_number) :
+			BaseGraphWindow(desc, STR_JUST_COMMA)
+	{
+		this->num_on_x_axis = GRAPH_NUM_MONTHS;
+		this->num_vert_lines = GRAPH_NUM_MONTHS;
+		this->x_values_start = ECONOMY_QUARTER_MINUTES;
+		this->x_values_increment = ECONOMY_QUARTER_MINUTES;
+		this->draw_dates = !TimerGameEconomy::UsingWallclockUnits();
+		this->InitializeWindow(window_number);
+	}
+
+	OverflowSafeInt64 GetGraphData(const Company *c, int j) override {
+		return (OverflowSafeInt64) -(c->old_economy[j].income / c->old_economy[j].expenses);
+	}
+};
+
+static constexpr NWidgetPart _nested_share_price_widgets[] = {
+	NWidget(NWID_HORIZONTAL),
+		NWidget(WWT_CLOSEBOX, COLOUR_BROWN),
+		NWidget(WWT_CAPTION, COLOUR_BROWN), SetStringTip(STR_GRAPH_COMPANY_PERFORMANCE_RATINGS_CAPTION, STR_TOOLTIP_WINDOW_TITLE_DRAG_THIS),
+		NWidget(WWT_PUSHTXTBTN, COLOUR_BROWN, WID_PHG_DETAILED_PERFORMANCE), SetMinimalSize(50, 0), SetStringTip(STR_PERFORMANCE_DETAIL_KEY, STR_GRAPH_PERFORMANCE_DETAIL_TOOLTIP),
+		NWidget(WWT_PUSHTXTBTN, COLOUR_BROWN, WID_GRAPH_KEY_BUTTON), SetMinimalSize(50, 0), SetStringTip(STR_GRAPH_KEY_BUTTON, STR_GRAPH_KEY_TOOLTIP),
+		NWidget(WWT_SHADEBOX, COLOUR_BROWN),
+		NWidget(WWT_DEFSIZEBOX, COLOUR_BROWN),
+		NWidget(WWT_STICKYBOX, COLOUR_BROWN),
+	EndContainer(),
+	NWidget(WWT_PANEL, COLOUR_BROWN, WID_GRAPH_BACKGROUND),
+		NWidget(NWID_VERTICAL),
+			NWidget(WWT_EMPTY, INVALID_COLOUR, WID_GRAPH_GRAPH), SetMinimalSize(576, 224), SetFill(1, 1), SetResize(1, 1),
+			NWidget(NWID_HORIZONTAL),
+				NWidget(NWID_SPACER), SetMinimalSize(12, 0), SetFill(1, 0), SetResize(1, 0),
+				NWidget(WWT_TEXT, INVALID_COLOUR, WID_GRAPH_FOOTER), SetMinimalSize(0, 6), SetPadding(2, 0, 2, 0), SetStringTip(STR_EMPTY, STR_NULL),
+				NWidget(NWID_SPACER), SetFill(1, 0), SetResize(1, 0),
+				NWidget(WWT_RESIZEBOX, COLOUR_BROWN, WID_GRAPH_RESIZE), SetStringTip(RWV_HIDE_BEVEL, STR_TOOLTIP_RESIZE),
+			EndContainer(),
+		EndContainer(),
+	EndContainer(),
+};
+
+static WindowDesc _share_price_desc(
+	WDP_AUTO, "graph_shares_price", 0, 0,
+	WC_SHARES_PRICE, WC_NONE,
+	0,
+	_nested_share_price_widgets
+);
+
 void ShowSharesPriceGraph() {
-	return;
+	AllocateWindowDescFront<SharesPriceGraphWindow>(_share_price_desc, 0);
 }

@@ -545,6 +545,12 @@ enum WindowClass {
 	WC_DELIVERED_CARGO,
 
 	/**
+	 * Shares Price graph;
+	 */
+
+	WC_SHARES_PRICE,
+
+	/**
 	 * Performance history graph; %Window numbers:
 	 *   - 0 = #PerformanceHistoryGraphWidgets
 	 */
